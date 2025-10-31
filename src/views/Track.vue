@@ -168,11 +168,13 @@
         <p class="text-gray-600 text-lg">No order found for this code.</p>
       </div>
     </div>
+    <Footer/>
   </div>
 </template>
 
 <script setup lang="ts">
-import Header from "@/components/header.vue";
+import Header from "@/components/gl-header.vue";
+import Footer from "@/components/gl-footer.vue";
 import { ref, watch } from "vue";
 import { useGetSingleOrder } from "@/hooks";
 

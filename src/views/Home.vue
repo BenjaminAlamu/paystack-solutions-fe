@@ -35,6 +35,7 @@
       <h3 class="text-3xl font-bold text-center mb-10 text-gray-800">
         Featured Groceries
       </h3>
+      <Loader v-if="isfeaturedProductsLoading"/>
 
       <div v-if="!isfeaturedProductsLoading" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         <ProductCard
@@ -45,20 +46,15 @@
       </div>
     </section>
 
-    <footer class="py-10 border-t">
-      <div class="max-w-7xl mx-auto px-6 text-center text-gray-500 text-sm">
-        <p>
-          &copy; {{ new Date().getFullYear() }} Grundy LLC. Freshness Delivered
-          Daily.
-        </p>
-      </div>
-    </footer>
+    <Footer/>
   </div>
 </template>
 
 <script setup lang="ts">
-import ProductCard from "@/components/product-card.vue";
-import Header from "@/components/header.vue";
+import ProductCard from "@/components/gl-product-card.vue";
+import Footer from "@/components/gl-footer.vue";
+import Header from "@/components/gl-header.vue";
+import Loader from "@/components/gl-loader.vue";
 
 import { useGetFeaturedProducts } from "@/hooks";
 const { featuredProducts, isfeaturedProductsLoading} = useGetFeaturedProducts();

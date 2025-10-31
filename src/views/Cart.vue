@@ -3,7 +3,7 @@
   <div class="min-h-screen max-w-7xl mx-auto bg-white p-6">
     <h2 class="text-2xl font-bold text-gray-800 mb-6">Your Cart</h2>
 
-    <div v-if="cart.items.length === 0" class="text-gray-500 text-center mt-10">
+    <div v-if="cart.items.length === 0" class="py-64 text-gray-500 text-center mt-10">
       Your cart is empty 🛒
     </div>
 
@@ -139,11 +139,13 @@
         </button>
       </div>
     </div>
+    <Footer/>
   </div>
 </template>
 
 <script setup lang="ts">
-import Header from "@/components/header.vue";
+import Header from "@/components/gl-header.vue";
+import Footer from "@/components/gl-footer.vue";
 import { useCartStore } from "@/store/cart";
 import { ref } from "vue";
 import { useCreateOrder } from "@/hooks";

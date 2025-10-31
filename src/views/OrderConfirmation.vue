@@ -190,11 +190,13 @@
         </button>
       </div>
     </div>
+    <Footer/>
   </div>
 </template>
 
 <script setup lang="ts">
-import Header from "@/components/header.vue";
+import Header from "@/components/gl-header.vue";
+import Footer from "@/components/gl-footer.vue";
 import { ref, onMounted, onBeforeUnmount, watchEffect } from "vue";
 import { useRouter } from "vue-router";
 import { useCartStore } from "@/store/cart";

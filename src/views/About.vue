@@ -66,12 +66,14 @@
           technology, payments, and logistics to make fresh food accessible to every household.
         </p>
       </div>
+      <Footer/>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import Header from "@/components/header.vue";
+import Header from "@/components/gl-header.vue";
+import Footer from "@/components/gl-footer.vue";
 </script>
 
 <style scoped>

@@ -7,7 +7,9 @@
         All Groceries
       </h3>
 
-      <div v-if="!isAllProductsLoading" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <Loader v-if="isAllProductsLoading"/>
+
+      <div v-else class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         <ProductCard
           v-for="product in allProducts.data.data"
           :key="product.id"
@@ -16,21 +18,15 @@
       </div>
     </section>
 
-    <footer class="py-10 border-t">
-      <div class="max-w-7xl mx-auto px-6 text-center text-gray-500 text-sm">
-        <p>
-          &copy; {{ new Date().getFullYear() }} Grundy LLC. Freshness Delivered
-          Daily.
-        </p>
-      </div>
-    </footer>
+    <Footer/>
   </div>
 </template>
 
 <script setup lang="ts">
-import ProductCard from "@/components/product-card.vue";
-import Header from "@/components/header.vue";
-
+import ProductCard from "@/components/gl-product-card.vue";
+import Loader from "@/components/gl-loader.vue";
+import Footer from "@/components/gl-footer.vue";
+import Header from "@/components/gl-header.vue";
 import { useGetAllProducts } from "@/hooks";
 const { allProducts, isAllProductsLoading } = useGetAllProducts();
 </script>
