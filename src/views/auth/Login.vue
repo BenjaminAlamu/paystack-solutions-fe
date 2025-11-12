@@ -55,7 +55,7 @@
         </main>
 
         <button type="submit" class="btn-primary w-full">
-          {{ isLoggingIn ? "Loading..." : " Register as User" }}
+          {{ isLoggingIn ? "Loading..." : " Login" }}
         </button>
       </form>
 

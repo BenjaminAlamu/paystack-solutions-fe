@@ -22,7 +22,7 @@
 
           <div class="flex-1">
             <h4 class="font-semibold text-lg text-gray-800">{{ item.name }}</h4>
-            <p class="text-sm text-gray-500">Seller:</p>
+            <p class="text-sm text-gray-500">Seller: {{ item?.merchant?.businessName }}</p>
             <p class="mt-1 font-medium text-green-700">
               ₦{{ item.price.toLocaleString() }}
             </p>

@@ -7,6 +7,9 @@ export interface CartItem {
   price: number;
   quantity: number;
   imageUrl?: string;
+  merchant?: {
+    businessName: string
+  };
 }
 
 export interface CartStoreType {
